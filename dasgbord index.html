@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Visuals</title>
+    <!-- Einbindung von Google Fonts und Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #64748b;
+            
+            /* Class Colors */
+            --platin-light: #eff6ff;
+            --platin-border: #2563eb;
+            --platin-text: #1e3a8a;
+            --platin-badge-bg: #dbeafe;
+            --platin-badge-text: #1e40af;
+
+            --gold-light: #fffbeb;
+            --gold-border: #f59e0b;
+            --gold-text: #92400e;
+            
+            --silver-light: #f8fafc;
+            --silver-border: #94a3b8;
+            --silver-text: #475569;
+            
+            --bronze-light: #fff7ed;
+            --bronze-border: #d97706;
+            --bronze-text: #9a3412;
+            
+            --wood-light: #fdfdfd;
+            --wood-border: #e2e8f0;
+            --wood-text: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px;
+        }
+
+        /* Header Area */
+        header {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Methodik Box */
+        .methodology-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+        }
+
+        .methodology-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .criteria-item {
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border-left: 4px solid #ccc;
+            background: #f8fafc;
+        }
+
+        .crit-platin { border-color: var(--platin-border); background: var(--platin-light); }
+        .crit-gold { border-color: var(--gold-border); background: var(--gold-light); }
+        .crit-silver { border-color: var(--silver-border); background: var(--silver-light); }
+        .crit-bronze { border-color: var(--bronze-border); background: var(--bronze-light); }
+        .crit-wood { border-color: var(--wood-border); background: var(--wood-light); opacity: 0.8; }
+
+        .criteria-item strong { display: block; font-size: 0.95rem; margin-bottom: 4px; color: var(--text-main); }
+        .criteria-math { font-family: monospace; color: var(--text-muted); display: block; margin-bottom: 4px;}
+
+        /* Strategie-Erklärungen */
+        .strategy-section {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .strategy-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .strategy-card h3 { margin-top: 0; font-size: 1rem; color: #1e40af; }
+        .strategy-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0; }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            background: rgba(240, 242, 245, 0.9);
+            padding: 10px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        /* Search Input Styling */
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .search-input {
+            padding: 8px 16px 8px 35px; /* Platz für Icon */
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            width: 220px;
+            outline: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            color: #94a3b8;
+            pointer-events: none;
+        }
+
+        /* Dashboard Grid - 5 Spalten Layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1400px) {
+            .dashboard-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 900px) {
+            .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .dashboard-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Tier Column Styling */
+        .tier-column {
+            background: transparent;
+        }
+
+        .tier-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid transparent;
+            min-height: 50px;
+        }
+
+        .tier-icon {
+            font-size: 1.5rem;
+        }
+
+        .tier-title {
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+        
+        .count-badge {
+            background: rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            margin-left: auto;
+        }
+
+        /* Tier Specific Header Styling */
+        .tier-platin .tier-header { border-color: var(--platin-border); color: var(--platin-text); }
+        .tier-gold .tier-header { border-color: var(--gold-border); color: var(--gold-text); }
+        .tier-silver .tier-header { border-color: var(--silver-border); color: var(--silver-text); }
+        .tier-bronze .tier-header { border-color: var(--bronze-border); color: var(--bronze-text); }
+        .tier-wood .tier-header { border-color: var(--wood-border); color: var(--wood-text); }
+
+        /* Card Component */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px 15px 15px 20px; /* Left padding larger for border */
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
+            position: relative;
+            border-left-width: 4px;
+            border-left-style: solid;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+            z-index: 10;
+        }
+
+        /* Tier Card Styling */
+        .card.platin { border-left-color: var(--platin-border); background: linear-gradient(to right, #eff6ff, white); }
+        .card.gold { border-left-color: var(--gold-border); background: var(--gold-light); }
+        .card.silver { border-left-color: var(--silver-border); background: var(--silver-light); }
+        .card.bronze { border-left-color: var(--bronze-border); background: var(--bronze-light); }
+        .card.wood { border-left-color: var(--wood-border); background: var(--wood-light); opacity: 0.75; }
+        .card.wood:hover { opacity: 1; }
+
+        .kpi-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 3px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* KPI Colors - Slightly adjusted for readability */
+        .kpi-usage { background: #e0e7ff; color: #3730a3; }
+        .kpi-popularity { background: #fae8ff; color: #86198f; }
+        .kpi-loyalty { background: #dcfce7; color: #14532d; }
+        .kpi-awareness { background: #ffedd5; color: #7c2d12; }
+
+        .industry-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+            padding-right: 50px; /* Space for badge */
+            line-height: 1.35;
+            word-wrap: break-word;
+        }
+
+        .involvement-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 1px 6px;
+            border-radius: 10px;
+            margin-top: 4px;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .stat-item strong {
+            display: block;
+            color: var(--text-main);
+            font-size: 0.75rem;
+        }
+
+        /* Legend Footer */
+        .legend {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        /* Loading/Parsing State */
+        #loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fun Visuals</h1>
+        <p class="subtitle">Analyse der Social Buzz Effekte auf Unternehmens-KPIs.</p>
+    </header>
+
+    <!-- Methodik Box -->
+    <div class="methodology-box">
+        <div class="methodology-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Klassifizierungskriterien & Handlungsempfehlungen
+        </div>
+        <div class="criteria-grid">
+            <div class="criteria-item crit-platin">
+                <strong>Platin-Klasse</strong>
+                <span class="criteria-math">|β| > 10 & R² > 0,75</span>
+                Außerordentliche Effekte. <br><strong>Strategie:</strong> Maximaler Fokus. Buzz ist ein entscheidender Geschäftstreiber.
+            </div>
+            <div class="criteria-item crit-gold">
+                <strong>Gold-Klasse</strong>
+                <span class="criteria-math">|β| > 7 & R² > 0,60</span>
+                Robuste Effekte. <br><strong>Strategie:</strong> Investieren. Buzz-Kampagnen liefern verlässlich Ergebnisse.
+            </div>
+            <div class="criteria-item crit-silver">
+                <strong>Silber-Klasse</strong>
+                <span class="criteria-math">|β| > 5 & R² > 0,40</span>
+                Moderate Effekte. <br><strong>Strategie:</strong> Optimieren. Buzz wirkt gut im Mix mit anderen Kanälen.
+            </div>
+            <div class="criteria-item crit-bronze">
+                <strong>Bronze-Klasse</strong>
+                <span class="criteria-math">|β| > 3 & R² > 0,20</span>
+                Schwache Effekte. <br><strong>Strategie:</strong> Flankierend. Buzz allein reicht nicht aus; nur zur Unterstützung von Paid Media nutzen.
+            </div>
+            <div class="criteria-item crit-wood">
+                <strong>Holz-Klasse</strong>
+                <span class="criteria-math">|β| > 0</span>
+                Minimale Effekte. <br><strong>Strategie:</strong> Vermeiden. Ressourcen lieber in Preis, Produktverfügbarkeit oder klassische Werbung stecken.
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategie Section -->
+    <div class="strategy-section">
+        <div class="strategy-card">
+            <h3>📊 Interpretation der KPIs</h3>
+            <p>
+                <strong>Usage (Sales):</strong> Hat Buzz direkten Einfluss auf den Kauf/Verbrauch?<br>
+                <strong>Popularity:</strong> Steigert Buzz die allgemeine Beliebtheit der Marke?<br>
+                <strong>Awareness:</strong> Hilft Buzz, damit die Marke überhaupt wahrgenommen wird?<br>
+                <strong>Loyalty:</strong> Führt Buzz zu Wiederkäufen und Kundenbindung?
+            </p>
+        </div>
+        <div class="strategy-card">
+            <h3>🧠 High vs. Low Involvement</h3>
+            <p>
+                <strong>High Involvement:</strong> Produkte, über die man viel nachdenkt (z.B. Autos, Versicherungen). Buzz wirkt hier oft informativ.<br>
+                <strong>Low Involvement:</strong> Alltägliche Produkte (z.B. Snacks, Getränke). Hier wirkt Buzz oft emotional oder impulsiv.
+            </p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <!-- Search -->
+        <div class="search-wrapper">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="searchInput" class="search-input" placeholder="Branche suchen..." oninput="handleSearch(this.value)">
+        </div>
+
+        <button class="filter-btn active" onclick="filterData('all')">Alle KPIs</button>
+        <button class="filter-btn" onclick="filterData('Usage')">Usage</button>
+        <button class="filter-btn" onclick="filterData('Popularity')">Popularity</button>
+        <button class="filter-btn" onclick="filterData('Loyalty')">Loyalty</button>
+        <button class="filter-btn" onclick="filterData('Awareness')">Awareness</button>
+    </div>
+
+    <div id="loading">Daten werden verarbeitet...</div>
+
+    <div class="dashboard-grid" id="dashboard" style="display:none;">
+        
+        <!-- PLATIN COLUMN -->
+        <div class="tier-column tier-platin">
+            <div class="tier-header">
+                <span class="tier-icon">💎</span>
+                <div class="tier-title">Platin</div>
+                <span class="count-badge" id="count-Platin">0</span>
+            </div>
+            <div id="container-Platin"></div>
+        </div>
+
+        <!-- GOLD COLUMN -->
+        <div class="tier-column tier-gold">
+            <div class="tier-header">
+                <span class="tier-icon">🏆</span>
+                <div class="tier-title">Gold</div>
+                <span class="count-badge" id="count-Gold">0</span>
+            </div>
+            <div id="container-Gold"></div>
+        </div>
+
+        <!-- SILVER COLUMN -->
+        <div class="tier-column tier-silver">
+            <div class="tier-header">
+                <span class="tier-icon">🥈</span>
+                <div class="tier-title">Silber</div>
+                <span class="count-badge" id="count-Silber">0</span>
+            </div>
+            <div id="container-Silber"></div>
+        </div>
+
+        <!-- BRONZE COLUMN -->
+        <div class="tier-column tier-bronze">
+            <div class="tier-header">
+                <span class="tier-icon">🥉</span>
+                <div class="tier-title">Bronze</div>
+                <span class="count-badge" id="count-Bronze">0</span>
+            </div>
+            <div id="container-Bronze"></div>
+        </div>
+
+        <!-- WOOD COLUMN -->
+        <div class="tier-column tier-wood">
+            <div class="tier-header">
+                <span class="tier-icon">🪵</span>
+                <div class="tier-title">Holz</div>
+                <span class="count-badge" id="count-Holz">0</span>
+            </div>
+            <div id="container-Holz"></div>
+        </div>
+
+    </div>
+
+    <div class="legend">
+        <strong>Datenquelle:</strong> Aggregierte Regressionsanalyse. Die Einordnung basiert auf der Stärke (Estimate) und Verlässlichkeit (R²) des Buzz-Einflusses.
+    </div>
+
+    <script>
+        // 1. Existing Usage/Popularity/Awareness Data (copied from previous state)
+        // We will filter out any old 'Loyalty' entries from here to be safe.
+        const baseData = `UsageConsumer electronics online shopStarkAußergewöhnlichSilberlowUsageProtein-Shakes & trinkfertige MahlzeitenStarkAußergewöhnlichSilberlowUsageSportswearSehr starkAußergewöhnlichGoldlowUsageFernseherStarkAußergewöhnlichSilberhighPopularityGrocery stores (LebensmittellÃ¤den)StarkAußergewöhnlichSilberlowPopularitySportswearSehr starkAußergewöhnlichGoldlowUsageLaundry Detergent (Waschmittel)Sehr starkAußergewöhnlichGoldlowUsageRasierer & KlingenStarkAußergewöhnlichSilberlowPopularityOnline Betting (Online-Wetten)ModeratAußergewöhnlichBronzehighUsageGrocery stores (LebensmittellÃ¤den)StarkAußergewöhnlichSilberlowUsageSneakers/SportschuheSehr starkSehr starkGoldlowPopularityElektroautosStarkSehr starkSilberhighUsageMÃ¤nnerkosmetikStarkAußergewöhnlichSilberlowUsageMÃ¶bel-OnlineshopsStarkSehr starkSilberhighPopularityMÃ¶bel-OnlineshopsStarkAußergewöhnlichSilberhighUsageToys & baby online shopsStarkSehr starkSilberlowUsageSport & Outdoor Online-Shop MarktModeratSehr starkBronzelowUsageOnline Betting (Online-Wetten)ModeratSehr starkBronzehighPopularityMÃ¶belhÃ¤user (Furniture stores)ModeratAußergewöhnlichBronzehighPopularityRasierer & KlingenStarkSehr starkSilberlowUsageWearable marketStarkSehr starkSilberhighPopularityProtein-Shakes & trinkfertige MahlzeitenStarkSehr starkSilberlowPopularityLaundry Detergent (Waschmittel)Sehr starkSehr starkGoldlowUsageFlaschenwasser (Bottled water)ModeratSehr starkBronzelowPopularityMÃ¤nnerkosmetikStarkSehr starkSilberlowUsageFashion store marketStarkSehr starkSilberlowPopularitySneakers/SportschuheStarkSehr starkSilberlowUsagedigital paymentStarkSehr starkSilberhighUsagechocolate & candy barsStarkSehr starkSilberlowPopularityCar & motorcycle online shopStarkSehr starkSilberhighPopularitySoft DrinksModeratSehr starkBronzelowPopularityTravel portal (Reiseportal)ModeratSehr starkBronzehighUsageSoft DrinksStarkSehr starkSilberlowPopularitydigital paymentStarkSehr starkSilberhighUsageprice comparison portal marketModeratSehr starkBronzehighUsageSchuheStarkSehr starkSilberlowPopularityWearable marketStarkSehr starkSilberhighPopularitySchuheStarkSehr starkSilberlowUsageTravel portal (Reiseportal)StarkSehr starkSilberhighUsageSwim wear (Bademode)ModeratStarkBronzelowUsageMÃ¶belhÃ¤user (Furniture stores)ModeratSehr starkBronzehighUsageSpirituosenStarkSehr starkSilberlowUsageCar & motorcycle online shopStarkSehr starkSilberhighPopularityHousehold Cleaners (Haushaltsreiniger)Sehr starkSehr starkGoldlowPopularityFernseherStarkAußergewöhnlichSilberhighAwarenessMÃ¶belhÃ¤user (Furniture stores)Sehr starkSehr starkGoldhighUsageeveryday fashionModeratSehr starkBronzelowUsageDrohnenmarktStarkSehr starkSilberhighUsageZahnpastamarktStarkSehr starkSilberlowPopularityConsumer electronics online shopModeratSehr starkBronzelowPopularityprice comparison portal marketModeratSehr starkBronzehighUsageHardware Stores (BaumÃ¤rkte)ModeratSehr starkBronzelowPopularityFlaschenwasser (Bottled water)ModeratSehr starkBronzelowUsageKopfhÃ¶rermarktStarkStarkSilberhighUsageSmart Speaker MarktModeratSehr starkBronzehighPopularityAI tool marketModeratSehr starkBronzehighPopularityWaschmaschinenSehr starkSehr starkGoldhighPopularitySmartphone marketStarkStarkSilberhighUsageKaffeemarktStarkSehr starkSilberlowPopularitychocolate & candy barsStarkSehr starkSilberlowPopularityGesichtspflegeStarkSehr starkSilberlowPopularityeveryday fashionModeratStarkBronzelowUsageStaubsaugerStarkStarkSilberhighUsagebeauty & health online shop marketStarkSehr starkSilberlowUsageSmartphone marketStarkStarkSilberhighPopularityFleischersatzprodukteModeratSehr starkBronzelowUsageHousehold Cleaners (Haushaltsreiniger)Sehr starkSehr starkGoldlowUsageDIY & garden online shopsModeratSehr starkBronzelowPopularityLuxusmodeModeratSehr starkBronzehighPopularitySwim wear (Bademode)StarkStarkSilberlowPopularityKryptowÃ¤hrungenModeratSehr starkBronzehighPopularityRetail store marketModeratSehr starkBronzelowUsageWaschmaschinenSehr starkSehr starkGoldhighUsageFleischersatzprodukteModeratSehr starkBronzelowUsageOutdoor-ModeStarkStarkSilberlowPopularityKaffeemarktStarkStarkSilberlowPopularityHardware Stores (BaumÃ¤rkte)StarkStarkSilberlowAwarenessWaschmaschinenExtrem starkSehr starkPlatinhighPopularityAir Fryer Market (HeiÃŸluftfritteusen)StarkStarkSilberhighAwarenessAI tool marketStarkSehr starkSilberhighPopularityOutdoor-ModeStarkStarkSilberlowPopularityKÃ¼hlschrankmarktSehr starkSehr starkGoldhighAwarenessFlaschenwasser (Bottled water)Sehr starkSehr starkGoldlowUsageBrotaufstriche (Spread)StarkStarkSilberlowUsageAir Fryer Market (HeiÃŸluftfritteusen)ModeratStarkBronzehighAwarenessdigital paymentExtrem starkSehr starkGoldhighPopularityZahnpastamarktStarkSehr starkSilberlowUsageKÃ¼hlschrankmarktStarkStarkSilberhighAwarenessSecond-hand apparel online shopsExtrem starkSehr starkGoldlowPopularityCar insuranceModeratStarkBronzehighPopularitySmart HomeStarkStarkSilberhighUsageEnergy drinksModeratStarkBronzelowUsageSalty snacksStarkStarkSilberlowUsageSaftmarktStarkStarkSilberlowUsageSauce & condiment marketStarkStarkSilberlowUsageOnline-Shop fÃ¼r HeimtierbedarfModeratStarkBronzelowUsageGesichtspflegeStarkStarkSilberlowUsageSecond-hand apparel online shopsModeratSehr starkBronzelowPopularitySalty snacksStarkStarkSilberlowUsageFashion online shopStarkStarkSilberlowUsageAI tool marketStarkStarkSilberhighAwarenessaccessory & bag marketExtrem starkSehr starkGoldlowPopularityaccessory & bag marketModeratStarkBronzelowPopularityJewelry marketStarkStarkSilberhighPopularityHair careModeratStarkBronzehighPopularitybeauty & health online shop marketStarkStarkSilberlowPopularitySpirituosenModeratStarkBronzelowPopularityBrotaufstriche (Spread)StarkStarkSilberlowPopularityStaubsaugerStarkStarkSilberhighUsageHair careModeratStarkBronzehighUsageJoghurtStarkStarkSilberlowPopularityCheese marketModeratStarkBronzelowUsageE-bike & pedelec marketSehr starkStarkGoldhighUsageCheeseModeratStarkBronzelowUsageLuxusmodeModeratStarkBronzehighAwarenessbeauty & health online shop marketExtrem starkSehr starkGoldlowPopularitySmart Speaker MarktModeratStarkBronzehighUsageMilchalternativenmarktModeratStarkBronzelowAwarenessGaming hardware & peripheral marketSehr starkSehr starkGoldhighUsageDeodorantsStarkSehr starkSilberlowPopularityGaming hardware & peripheral marketStarkStarkSilberhighPopularityMilchalternativenmarktModeratStarkBronzelowPopularityFashion store marketModeratStarkBronzelowPopularityE-bike & pedelec marketStarkStarkSilberhighAwarenessMÃ¶bel-OnlineshopsExtrem starkSehr starkGoldhighUsageGaming hardware & peripheral marketStarkStarkSilberhighAwarenessCar insuranceStarkSehr starkSilberhighPopularitySauce & condiment marketStarkStarkSilberlowAwarenessGrocery stores (LebensmittellÃ¤den)Sehr starkStarkGoldlowLoyaltySmartphone marketModeratStarkBronzehighPopularitySport & Outdoor Online-Shop MarktModeratStarkBronzelowUsageRetail store marketStarkStarkSilberlowUsageKryptowÃ¤hrungenModeratStarkBronzehighUsageVR & AR HeadsetsModeratSehr starkBronzehighAwarenessKrankenversicherungStarkStarkSilberhighPopularityDeodorantsStarkStarkSilberlowPopularityKopfhÃ¶rermarktStarkStarkSilberhighPopularitySecond-hand apparel online shopsModeratStarkBronzelowUsageReady-made-foodModeratStarkBronzelowPopularityToys & baby online shopsModeratStarkBronzelowUsageClean BeautyStarkStarkSilberlowAwarenessSchuheSehr starkStarkGoldlowAwarenessSwim wear (Bademode)Sehr starkStarkGoldlowPopularitycoffee machine & coffee makerStarkStarkSilberhighUsageVideo game franchise marketModeratStarkBronzehighUsageIce Cream MarketStarkStarkSilberlowPopularityJewelry retailer (SchmuckhÃ¤ndler)ModeratStarkBronzehighUsageOnline Grocery & Meal DeliveryModeratStarkBronzelowPopularityJoghurtStarkStarkSilberlowAwarenessDating ServicesSehr starkStarkGoldhighUsageKosmetik & Make-upModeratStarkBronzelowUsagecoffee machine & coffee makerStarkStarkSilberhighPopularityDIY & garden online shopsModeratStarkBronzelowPopularityKrankenversicherungModeratStarkBronzehighAwarenessKÃ¼hlschrankmarktExtrem starkStarkGoldhighUsageCar insuranceModeratModeratBronzehighPopularityKosmetik & Make-upModeratStarkBronzelowAwarenessCar & motorcycle online shopExtrem starkStarkGoldhighPopularityMobilitÃ¤tsdienstleistungenStarkStarkSilberhighPopularityOnline-Shop fÃ¼r HeimtierbedarfModeratStarkBronzelowUsageKrankenversicherungModeratModeratBronzehighUsageElektroautosModeratModeratBronzehighAwarenessOTC medicationExtrem starkStarkGoldhighUsageMilchmarktModeratStarkBronzelowAwarenessRetail store marketSehr starkStarkGoldlowUsageSportswearSehr starkStarkSilberlowUsageMobilitÃ¤tsdienstleistungenModeratStarkBronzehighAwarenessJoghurtExtrem starkStarkSilberlowPopularitySaftmarktModeratStarkBronzelowAwarenessKryptowÃ¤hrungenStarkStarkSilberhighAwarenessSport & Outdoor Online-Shop MarktSehr starkStarkSilberlowUsageSmart HomeModeratStarkBronzehighUsageOrganic food (Bio-Lebensmittel)StarkStarkSilberlowPopularityVR & AR HeadsetsModeratStarkBronzehighPopularityOTC medicationModeratModeratBronzehighAwarenessKaffeemarktExtrem starkStarkSilberlowPopularityReady-made-foodModeratModeratBronzelowPopularityEnergy drinksModeratStarkBronzelowPopularityOnline Grocery & Meal DeliveryModeratStarkBronzelowAwarenessCheese marketExtrem starkStarkSilberlowPopularityDrohnenmarktModeratStarkBronzehighAwarenessFashion store marketSehr starkStarkSilberlowAwarenessJewelry marketExtrem starkStarkSilberhighPopularityIce Cream MarketModeratModeratBronzelowAwarenesseveryday fashionSehr starkStarkSilberlowAwarenessHousehold Cleaners (Haushaltsreiniger)Extrem starkStarkSilberlowAwarenessToys & baby online shopsSehr starkStarkSilberlowPopularityFood processors (KÃ¼chenmaschinen)StarkModeratSilberhighUsageBeerModeratModeratBronzelowUsageFood processors (KÃ¼chenmaschinen)ModeratStarkBronzehighAwarenessOnline Betting (Online-Wetten)StarkStarkSilberhighAwarenessOnline-Shop fÃ¼r HeimtierbedarfSehr starkStarkSilberlowUsageJewelry retailer (SchmuckhÃ¤ndler)ModeratStarkBronzehighPopularityPremium fashionModeratModeratBronzehighAwarenessFleischersatzprodukteStarkStarkSilberlowAwarenessBrotaufstriche (Spread)Sehr starkModeratSilberlowAwarenessE-Mail-AnbieterExtrem starkModeratSilberhighPopularityOrganic food (Bio-Lebensmittel)StarkModeratSilberlowUsageOTC medicationModeratModeratBronzehighUsagePremium fashionModeratModeratBronzehighUsageJewelry marketStarkModeratSilberhighAwarenessPremium fashionExtrem starkModeratSilberhighAwarenessOutdoor-ModeSehr starkModeratSilberlowUsageDishwashing Liquid (SpÃ¼lmittel)StarkModeratSilberlowAwarenessJewelry retailer (SchmuckhÃ¤ndler)Sehr starkModeratSilberhighAwarenessSaftmarktSehr starkModeratSilberlowPopularityMilchmarktModeratModeratBronzelowAwarenessOnline Grocery & Meal DeliverySehr starkModeratSilberlowAwarenessConsumer electronics online shopStarkModeratSilberlowAwarenessHardware Stores (BaumÃ¤rkte)Sehr starkModeratSilberlowLoyaltyConsumer electronics online shopModeratModeratBronzelowPopularityDishwashing Liquid (SpÃ¼lmittel)StarkModeratSilberlowAwarenessSmart HomeExtrem starkModeratSilberhighUsageMode-Online-ShopsStarkSehr starkSilberlowAwarenessMode-Online-ShopsExtrem starkModeratSilberlowAwarenessBeerSehr starkModeratSilberlowAwarenessSneakers/SportschuheSehr starkModeratSilberlowPopularityBeerSchwachModeratHolzlowPopularitySonnenbrillenStarkModeratSilberlowAwarenessprice comparison portal marketModeratModeratBronzehighAwarenessLuxusmodeSehr starkModeratSilberhighPopularityFashion online shopModeratModeratBronzelowAwarenessDeodorantsSehr starkModeratSilberlowUsageAntivirus & security softwareSehr starkModeratSilberhighAwarenessOrganic food (Bio-Lebensmittel)Sehr starkModeratSilberlowUsageonline pharmaciesModeratModeratBronzehighUsageOnline-ApothekenModeratModeratBronzehighAwarenesschocolate & candy barsSehr starkModeratSilberlowAwarenessSoft DrinksSehr starkModeratSilberlowPopularityAntivirus & security softwareStarkModeratBronzehighPopularityVideo game franchise marketModeratModeratBronzehighAwarenessTravel portal (Reiseportal)ModeratModeratBronzehighUsageaccessory & bag marketModeratModeratBronzelowAwarenessHair careSehr starkModeratSilberhighAwarenessProtein-Shakes & trinkfertige MahlzeitenStarkModeratSilberlowUsageGas stations & e-chargersStarkSchwachBronzehighUsageUhrenmarktSchwachModeratHolzhighAwarenessTiernahrung (pet food market)StarkModeratBronzelowUsageIced tea MarketModeratModeratBronzelowUsageFrÃ¼hstÃ¼ckscerealienModeratModeratBronzelowPopularityGas stations & e-chargersModeratSchwachBronzehighUsageFood supplement marketModeratSchwachBronzelowPopularityUhrenmarktSchwachSchwachHolzhighAwarenessMilchmarktSehr starkModeratBronzelowAwarenessDIY & garden online shopsStarkModeratBronzelowUsageBeverage online shop marketSchwachSchwachHolzlowAwarenessBeverage online shop marketModeratModeratBronzelowAwarenessRasierer & KlingenStarkModeratBronzelowAwarenessSalty snacksSehr starkModeratBronzelowAwarenessZahnpastamarktSehr starkModeratBronzelowAwarenessMÃ¤nnerkosmetikStarkModeratBronzelowAwarenessKosmetik & Make-upModeratModeratBronzelowAwarenessElektroautosStarkModeratBronzehighAwarenessGas stations & e-chargersSehr starkModeratBronzehighPopularityFrÃ¼hstÃ¼ckscerealienModeratSchwachBronzelowAwarenessSauce & condiment marketSehr starkModeratBronzelowAwarenessSmartphone marketModeratModeratBronzehighPopularityFood supplement marketSchwachSchwachHolzlowAwarenessGesichtspflegeStarkModeratBronzelowAwarenessLaundry Detergent (Waschmittel)StarkModeratBronzelowAwarenessEnergy drinksModeratModeratBronzelowAwarenessUhrenmarktStarkModeratBronzehighAwarenessMilchalternativenmarktStarkSchwachBronzelowAwarenessAntivirus & security softwareExtrem starkSchwachBronzehighPopularityDating ServicesSchwachSchwachHolzhighAwarenessMobilitÃ¤tsdienstleistungenStarkSchwachBronzehighAwarenessVR & AR HeadsetsModeratSchwachBronzehighPopularityIced tea MarketModeratSchwachBronzelowAwarenessWearable marketStarkSchwachBronzehighAwarenessSonnenbrillenExtrem starkSchwachBronzelowAwarenessReady-made-foodStarkSchwachBronzelowPopularityClean BeautySchwachSchwachHolzlowAwarenessStaubsaugerStarkSchwachBronzehighAwarenessFood processors (KÃ¼chenmaschinen)StarkSchwachBronzehighPopularityonline pharmaciesSchwachSchwachHolzhighPopularityOnline-ApothekenSchwachSchwachHolzhighAwarenessFashion online shopModeratSchwachBronzelowAwarenessKopfhÃ¶rermarktStarkSchwachBronzehighAwarenessSpirituosenStarkSchwachBronzelowAwarenessDishwashing Liquid (SpÃ¼lmittel)StarkSchwachHolzlowPopularityBeverage online shop marketSchwachNegligibleHolzlowAwarenessFrÃ¼hstÃ¼ckscerealienModeratNegligibleHolzlowAwarenessSmart Speaker MarktModeratNegligibleHolzhighAwarenesscoffee machine & coffee makerModeratNegligibleHolzhighAwarenessDrohnenmarktSchwachNegligibleHolzhighAwarenessSwim wear (Bademode)SchwachNegligibleHolzlowAwarenessAir Fryer Market (HeiÃŸluftfritteusen)ModeratNegligibleHolzhighUsageDating ServicesSchwachNegligibleHolzhighPopularityTiernahrung (pet food market)SchwachNegligibleHolzlowUsageTiernahrung (pet food market)SchwachNegligibleHolzlowUsageE-Mail-AnbieterSchwachNegligibleHolzhighAwarenessIce Cream MarketSchwachNegligibleHolzlowAwarenessDrohnenmarktSchwachNegligibleHolzhighAwarenessOnline-ApothekenSchwachNegligibleHolzhighAwarenessonline pharmaciesSchwachNegligibleHolzhighAwarenessFood supplement marketSchwachNegligibleHolzlowAwarenessE-bike & pedelec marketSchwachNegligibleHolzhighAwarenessVideo game franchise marketSchwachNegligibleHolzhighAwarenessFernseherNegligibleNegligibleHolzhighAwarenessClean BeautySchwachNegligibleHolzlowAwarenessIced tea MarketNegligibleNegligibleHolzlow`;
+
+        // 2. New Loyalty Data (Source of truth for Loyalty)
+        const loyaltyUpdateData = `KPIIndustryEinordnung EstimateEinordnung R_SquaredEffekt_KlasseInvolvementLoyaltyFernseherSchwachSehr starkHolzhighLoyaltySmartphone marketModeratStarkBronzehighLoyaltyAI tool marketModeratStarkBronzehighLoyaltyStaubsaugerStarkStarkSilberhighLoyaltyGaming hardware & peripheral marketModeratStarkBronzehighLoyaltyOnline Grocery & Meal DeliveryModeratStarkBronzelowLoyaltybeauty & health online shop marketStarkStarkSilberlowLoyaltyRetail store marketSchwachModeratHolzlowLoyaltyGrocery stores (LebensmittellÃ¤den)ModeratStarkBronzelowLoyaltySportswearModeratModeratBronzelowLoyaltyKopfhÃ¶rermarktStarkModeratSilberhighLoyaltySpirituosenSchwachModeratHolzlowLoyaltyConsumer electronics online shopModeratModeratBronzelowLoyaltyTravel portal (Reiseportal)ModeratModeratBronzehighLoyaltyOnline Betting (Online-Wetten)ModeratStarkBronzehighLoyaltyFleischersatzprodukteSchwachModeratHolzlowLoyaltyJewelry marketSchwachModeratHolzhighLoyaltyKÃ¼hlschrankmarktModeratModeratBronzehighLoyaltySmart HomeStarkModeratSilberhighLoyaltySneakers/SportschuheModeratModeratBronzelowLoyaltydigital paymentModeratModeratBronzehighLoyaltyWearable marketModeratModeratBronzehighLoyaltySport & Outdoor Online-Shop MarktModeratModeratBronzelowLoyaltyprice comparison portal marketSchwachModeratHolzhighLoyaltycoffee machine & coffee makerSchwachModeratHolzhighLoyaltyMÃ¤nnerkosmetikSchwachModeratHolzlowLoyaltyLuxusmodeModeratSchwachBronzehighLoyaltyProtein-Shakes & trinkfertige MahlzeitenModeratSchwachBronzelowLoyaltyWaschmaschinenSchwachSchwachHolzhighLoyaltyJewelry retailer (SchmuckhÃ¤ndler)ModeratModeratBronzehighLoyaltySoft DrinksSchwachModeratHolzlowLoyaltyFlaschenwasser (Bottled water)SchwachModeratHolzlowLoyaltyLaundry Detergent (Waschmittel)ModeratModeratBronzelowLoyaltyOutdoor-ModeModeratSchwachBronzelowLoyaltyCar & motorcycle online shopModeratSchwachBronzehighLoyaltyE-Mail-AnbieterModeratSchwachBronzehighLoyaltychocolate & candy barsSchwachSchwachHolzlowLoyaltyUhrenmarktSchwachSchwachHolzhighLoyaltyeveryday fashionSchwachSchwachHolzlowLoyaltyVR & AR HeadsetsModeratModeratBronzehighLoyaltyKryptowÃ¤hrungenModeratModeratBronzehighLoyaltyAir Fryer Market (HeiÃŸluftfritteusen)ModeratSchwachBronzehighLoyaltyOnline-Shop fÃ¼r HeimtierbedarfSchwachModeratHolzlowLoyaltyRasierer & KlingenModeratSchwachBronzelowLoyaltyFood processors (KÃ¼chenmaschinen)SchwachSchwachHolzhighLoyaltySauce & condiment marketModeratSchwachHolzlowLoyaltySchuheSchwachSchwachHolzlowLoyaltyGas stations & e-chargersSchwachSchwachHolzhighLoyaltyIce Cream MarketSchwachSchwachHolzlowLoyaltyHair careSchwachSchwachHolzhighLoyaltySonnenbrillenModeratSchwachHolzlowLoyaltyFood supplement marketSchwachNegligibleHolzlowLoyaltyMÃ¶bel-OnlineshopsSchwachSchwachHolzhighLoyaltyDeodorantsSchwachSchwachHolzlowLoyaltySecond-hand apparel online shopsSchwachSchwachHolzlowLoyaltyMÃ¶belhÃ¤user (Furniture stores)SchwachSchwachHolzhighLoyaltyaccessory & bag marketSchwachNegligibleHolzlowLoyaltySmart Speaker MarktSchwachSchwachHolzhighLoyaltyKosmetik & Make-upSchwachSchwachHolzlowLoyaltyClean BeautyModeratNegligibleHolzlowLoyaltyOrganic food (Bio-Lebensmittel)ModeratSchwachHolzlowLoyaltyKaffeemarktSchwachNegligibleHolzlowLoyaltyHousehold Cleaners (Haushaltsreiniger)SchwachNegligibleHolzlowLoyaltySalty snacksSchwachNegligibleHolzlowLoyaltyEnergy drinksSchwachSchwachHolzlowLoyaltyFashion store marketSchwachNegligibleHolzlowLoyaltyBeerSchwachNegligibleHolzlowLoyaltyZahnpastamarktSchwachNegligibleHolzlowLoyaltyDrohnenmarktSchwachNegligibleHolzhighLoyaltyDating ServicesSchwachNegligibleHolzhighLoyaltySwim wear (Bademode)SchwachNegligibleHolzlowLoyaltyOTC medicationSchwachNegligibleHolzhighLoyaltyToys & baby online shopsSchwachNegligibleHolzlowLoyaltyElektroautosSchwachNegligibleHolzhighLoyaltyDIY & garden online shopsSchwachNegligibleHolzlowLoyaltyTiernahrung (pet food market)SchwachNegligibleHolzlowLoyaltyGesichtspflegeSchwachNegligibleHolzlowLoyaltyHardware Stores (BaumÃ¤rkte)SchwachNegligibleHolzlowLoyaltyMobilitÃ¤tsdienstleistungenSchwachNegligibleHolzhighLoyaltyFrÃ¼hstÃ¼ckscerealienSchwachNegligibleHolzlowLoyaltyPremium fashionSchwachNegligibleHolzhighLoyaltyCar insuranceNegligibleNegligibleHolzhighLoyaltyIced tea MarketSchwachNegligibleHolzlowLoyaltyMilchalternativenmarktSchwachNegligibleHolzlowLoyaltyBrotaufstriche (Spread)SchwachNegligibleHolzlowLoyaltyMilchmarktSchwachNegligibleHolzlowLoyaltyMode-Online-ShopsSchwachNegligibleHolzlowLoyaltySaftmarktNegligibleNegligibleHolzlowLoyaltyReady-made-foodSchwachNegligibleHolzlowLoyaltyAntivirus & security softwareSchwachNegligibleHolzhighLoyaltyFashion online shopNegligibleNegligibleHolzlowLoyaltyKrankenversicherungNegligibleNegligibleHolzhighLoyaltyCheese marketNegligibleNegligibleHolzlowLoyaltyBeverage online shop marketNegligibleNegligibleHolzlowLoyaltyE-bike & pedelec marketSchwachNegligibleHolzhighLoyaltyVideo game franchise marketNegligibleNegligibleHolzhighLoyaltyDishwashing Liquid (SpÃ¼lmittel)NegligibleNegligibleHolzlowLoyaltyJoghurtNegligibleNegligibleHolzlowLoyaltyonline pharmaciesNegligibleNegligibleHolzhighLoyaltyOnline-ApothekenNegligibleNegligibleHolzhigh`;
+
+        let parsedData = [];
+        let currentFilterKPI = 'all';
+        let currentSearchTerm = '';
+
+        function cleanText(text) {
+            if(!text) return "";
+            return text
+                .replace(/Ã¤/g, "ä")
+                .replace(/Ã¶/g, "ö")
+                .replace(/Ã¼/g, "ü")
+                .replace(/ÃŸ/g, "ß")
+                .replace(/Ã/g, "")
+                .replace(/Â/g, "")
+                .trim();
+        }
+
+        function parseRawData() {
+            // Helper regex to split strings by KPI keyword
+            const splitter = /(?=(?:Usage|Popularity|Loyalty|Awareness))/g;
+
+            // 1. Process Base Data (Usage, Pop, Awareness) - Filter OUT Loyalty
+            const baseRows = baseData.split(splitter)
+                .filter(row => row.trim() !== "")
+                .filter(row => !row.startsWith('Loyalty') && !row.startsWith('KPI')); // Remove old Loyalty & headers
+
+            // 2. Process New Loyalty Data - Filter OUT header
+            const loyaltyRows = loyaltyUpdateData.split(splitter)
+                .filter(row => row.trim() !== "")
+                .filter(row => row.startsWith('Loyalty'));
+
+            // 3. Combine
+            const allRows = [...baseRows, ...loyaltyRows];
+            
+            // 4. Parse
+            const rowRegex = /^(Usage|Popularity|Loyalty|Awareness)(.*?)(Extrem stark|Sehr stark|Stark|Moderat|Schwach|Negligible)(Außergewöhnlich|Sehr stark|Stark|Moderat|Schwach|Negligible)(Platin|Gold|Silber|Bronze|Holz)(high|low)$/i;
+
+            parsedData = allRows.map(row => {
+                const match = row.match(rowRegex);
+                if (match) {
+                    return {
+                        kpi: match[1],
+                        industry: cleanText(match[2]),
+                        estimate: match[3],
+                        r2: match[4],
+                        class: match[5],
+                        inv: match[6]
+                    };
+                }
+                return null;
+            }).filter(item => item !== null);
+
+            // Sortierung
+            const tierOrder = { "Platin": 0, "Gold": 1, "Silber": 2, "Bronze": 3, "Holz": 4 };
+            parsedData.sort((a, b) => tierOrder[a.class] - tierOrder[b.class]);
+
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'grid';
+            
+            renderCards();
+        }
+
+        function handleSearch(term) {
+            currentSearchTerm = term.toLowerCase();
+            renderCards();
+        }
+
+        function filterData(kpi) {
+            currentFilterKPI = kpi;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.includes(kpi) || (kpi === 'all' && btn.innerText === 'Alle KPIs')) {
+                    btn.classList.add('active');
+                }
+            });
+            renderCards();
+        }
+
+        function renderCards() {
+            const tiers = ['Platin', 'Gold', 'Silber', 'Bronze', 'Holz'];
+            let counts = { Platin: 0, Gold: 0, Silber: 0, Bronze: 0, Holz: 0 };
+            
+            tiers.forEach(tier => {
+                const el = document.getElementById(`container-${tier}`);
+                if(el) el.innerHTML = '';
+            });
+
+            parsedData.forEach(item => {
+                // Check KPI
+                if(currentFilterKPI !== 'all' && item.kpi !== currentFilterKPI) return;
+                
+                // Check Search
+                if(currentSearchTerm && !item.industry.toLowerCase().includes(currentSearchTerm)) return;
+
+                counts[item.class]++;
+
+                const card = document.createElement('div');
+                card.className = `card ${item.class.toLowerCase()}`;
+                const badgeClass = `kpi-${item.kpi.toLowerCase()}`;
+
+                card.innerHTML = `
+                    <span class="kpi-badge ${badgeClass}">${item.kpi}</span>
+                    <div class="industry-name">${item.industry}</div>
+                    <span class="involvement-tag">${item.inv === 'high' ? 'High' : 'Low'} Involvement</span>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            Effekt
+                            <strong>${item.estimate}</strong>
+                        </div>
+                        <div class="stat-item">
+                            R²
+                            <strong>${item.r2}</strong>
+                        </div>
+                    </div>
+                `;
+
+                const container = document.getElementById(`container-${item.class}`);
+                if(container) container.appendChild(card);
+            });
+
+            tiers.forEach(tier => {
+                const badge = document.getElementById(`count-${tier}`);
+                if(badge) badge.textContent = counts[tier];
+            });
+        }
+
+        window.onload = parseRawData;
+
+    </script>
+</body>
+</html>
