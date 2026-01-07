@@ -1,0 +1,173 @@
+KPI;Industry;Estimate;Std_Error;Test_Statistic;P_Value;Signifikanz;R_Squared
+Awareness;OTC medication;14,454908;2,19366;6,589413;4,42E-11;***;0,62527337
+Awareness;Waschmaschinen;14,283902;2,19266;6,514419;7,30E-11;***;0,77652627
+Awareness;Möbel-Onlineshops;13,388033;2,08353;6,425655;1,31E-10;***;0,71015699
+Awareness;Kühlschrankmarkt;13,120625;2,97292;4,413381;1,02E-05;***;0,63033666
+Awareness;Car & motorcycle online shop;11,230572;1,99751;5,622277;1,88E-08;***;0,62840288
+Awareness;Smart Home;11,02882;3,0147;3,658347;2,54E-04;***;0,45613833
+Awareness;Antivirus & security software;10,631716;4,39115;2,421168;1,55E-02;*;0,28817471
+Awareness;Premium fashion;10,339363;2,50607;4,125721;3,70E-05;***;0,48604193
+Awareness;Jewelry market;10,252439;2,4336;4,21287;2,52E-05;***;0,54598947
+Awareness;E-Mail-Anbieter;10,212916;2,8105;3,633848;2,79E-04;***;0,48734563
+Awareness;digital payment;10,008132;1,96454;5,094391;3,50E-07;***;0,72544222
+Awareness;Dating Services;9,463317;1,7228;5,492986;3,95E-08;***;0,64738357
+Awareness;Luxusmode;9,055781;2,53416;3,573489;3,52E-04;***;0,43791531
+Awareness;Hair care;8,911529;2,64989;3,362981;7,71E-04;***;0,40903294
+Awareness;Jewelry retailer (Schmuckhändler);8,900445;2,7397;3,248695;1,16E-03;**;0,47643218
+Awareness;Möbelhäuser (Furniture stores);8,647519;1,33602;6,472588;9,63E-11;***;0,82070728
+Awareness;Gaming hardware & peripheral market;7,809589;1,23983;6,298902;3,00E-10;***;0,71296232
+Awareness;Gas stations & e-chargers;7,34922;3,28716;2,235738;2,54E-02;*;0,32685852
+Awareness;Kopfhörermarkt;6,740243;3,04808;2,21131;2,70E-02;*;0,2315752
+Awareness;Online Betting (Online-Wetten);6,627578;1,63178;4,061552;4,87E-05;***;0,52314397
+Awareness;Krankenversicherung;6,553538;1,39506;4,697689;2,63E-06;***;0,67595486
+Awareness;Kryptowährungen;6,538262;1,17989;5,541412;3,00E-08;***;0,58563308
+Awareness;Car insurance;6,445379;1,30398;4,942837;7,70E-07;***;0,70299277
+Awareness;AI tool market;6,272133;0,78069;8,034095;9,43E-16;***;0,77472193
+Awareness;Food processors (Küchenmaschinen);6,21628;2,85417;2,177965;2,94E-02;*;0,24804693
+Awareness;Staubsauger;5,877914;2,21051;2,659074;7,84E-03;**;0,24997156
+Awareness;Wearable market;5,752533;2,50347;2,297821;2,16E-02;*;0,25899893
+Awareness;Elektroautos;5,690556;2,14466;2,653362;7,97E-03;**;0,32881277
+Awareness;Uhrenmarkt;5,229275;2,05069;2,550002;1,08E-02;*;0,30352406
+Awareness;Mobilitätsdienstleistungen;5,106783;1,94015;2,632158;8,48E-03;**;0,27058358
+Awareness;coffee machine & coffee maker;4,979623;2,9751;1,673768;9,42E-02;.;0,1282423
+Awareness;price comparison portal market;4,602854;1,41625;3,250027;1,15E-03;**;0,45066234
+Awareness;Smartphone market;4,599668;1,86838;2,461851;1,38E-02;*;0,31828229
+Awareness;Travel portal (Reiseportal);4,569265;1,44398;3,164365;1,55E-03;**;0,41294897
+Awareness;VR & AR Headsets;4,124557;1,96201;2,10221;3,55E-02;*;0,2649505
+Awareness;Smart Speaker Markt;3,998915;2,87503;1,390914;1,64E-01;;0,13125922
+Awareness;Air Fryer Market (Heißluftfritteusen);3,937272;2,5566;1,540042;1,24E-01;;0,11015574
+Awareness;Online-Apotheken;2,694385;3,0405;0,886164;3,76E-01;;0,05689304
+Awareness;online pharmacies;2,694385;3,0405;0,886164;3,76E-01;;0,05689304
+Awareness;Drohnenmarkt;1,694353;1,78414;0,949675;3,42E-01;;0,07154048
+Awareness;Video game franchise market;1,281215;2,26095;0,566672;5,71E-01;;0,01550083
+Awareness;Fernseher;-0,392153;1,27489;-0,307597;7,58E-01;;0,01042074
+Awareness;E-bike & pedelec market;-1,557304;2,16654;-0,718797;4,72E-01;;0,02539841
+Loyalty;Staubsauger;5,641577;1,20204;4,69332;2,69E-06;***;0,59703707
+Loyalty;Smart Home;5,620775;1,77386;3,168675;1,53E-03;**;0,41385319
+Loyalty;Kopfhörermarkt;5,532557;1,53129;3,61301;3,03E-04;***;0,48788361
+Loyalty;AI tool market;4,725974;0,90683;5,211538;1,87E-07;***;0,66288712
+Loyalty;Gaming hardware & peripheral market;4,476944;0,98042;4,56637;4,96E-06;***;0,60007627
+Loyalty;Smartphone market;4,371415;0,80862;5,406028;6,44E-08;***;0,66836658
+Loyalty;Travel portal (Reiseportal);4,341861;1,22899;3,532861;4,11E-04;***;0,48405829
+Loyalty;Kühlschrankmarkt;4,30108;1,33019;3,233439;1,22E-03;**;0,39569001
+Loyalty;E-Mail-Anbieter;4,04784;1,73209;2,336974;1,94E-02;*;0,22462151
+Loyalty;digital payment;3,929331;1,35697;2,895663;3,78E-03;**;0,4933331
+Loyalty;Air Fryer Market (Heißluftfritteusen);3,455398;1,54058;2,242919;2,49E-02;*;0,29934672
+Loyalty;Wearable market;3,431347;1,21491;2,824364;4,74E-03;**;0,3425803
+Loyalty;Kryptowährungen;3,427198;1,524;2,248822;2,45E-02;*;0,34265408
+Loyalty;Jewelry retailer (Schmuckhändler);3,354182;1,33343;2,515461;1,19E-02;*;0,38290976
+Loyalty;VR & AR Headsets;3,279914;1,45111;2,260284;2,38E-02;*;0,37014625
+Loyalty;Car & motorcycle online shop;3,072366;1,30255;2,358726;1,83E-02;*;0,28836106
+Loyalty;Online Betting (Online-Wetten);3,067962;0,90917;3,374448;7,40E-04;***;0,53738309
+Loyalty;Luxusmode;3,04912;1,15278;2,645007;8,17E-03;**;0,25596883
+Loyalty;Waschmaschinen;2,975802;1,15135;2,58463;9,75E-03;**;0,29811618
+Loyalty;Gas stations & e-chargers;2,915266;1,47279;1,979414;4,78E-02;*;0,25251004
+Loyalty;price comparison portal market;2,817222;1,02153;2,757859;5,82E-03;**;0,39862618
+Loyalty;Smart Speaker Markt;2,802108;1,60084;1,750398;8,01E-02;.;0,21460557
+Loyalty;Fernseher;2,751732;0,49345;5,576463;2,45E-08;***;0,78525733
+Loyalty;coffee machine & coffee maker;2,738729;1,01406;2,700754;6,92E-03;**;0,31728411
+Loyalty;Food processors (Küchenmaschinen);2,695139;1,30336;2,067845;3,87E-02;*;0,24428192
+Loyalty;Jewelry market;2,690069;0,8284;3,24731;1,17E-03;**;0,40125733
+Loyalty;OTC medication;2,511617;1,75636;1,430016;1,53E-01;;0,08682247
+Loyalty;Uhrenmarkt;2,509883;1,09994;2,281828;2,25E-02;*;0,26039854
+Loyalty;Antivirus & security software;2,473469;2,8496;0,868007;3,85E-01;;0,04571277
+Loyalty;Drohnenmarkt;2,389428;1,63192;1,464185;1,43E-01;;0,12437547
+Loyalty;Möbel-Onlineshops;2,379718;1,31776;1,805887;7,09E-02;.;0,18073132
+Loyalty;Mobilitätsdienstleistungen;2,078504;1,67668;1,239656;2,15E-01;;0,08023084
+Loyalty;Elektroautos;2,009968;1,4823;1,355976;1,75E-01;;0,10171632
+Loyalty;Dating Services;1,94443;1,34072;1,45029;1,47E-01;;0,10311105
+Loyalty;Hair care;1,8986;1,01715;1,866587;6,20E-02;.;0,15103893
+Loyalty;Premium fashion;1,178072;1,03596;1,137174;2,55E-01;;0,06667084
+Loyalty;Möbelhäuser (Furniture stores);1,176269;0,66532;1,767965;7,71E-02;.;0,24718833
+Loyalty;Car insurance;0,993097;0,88582;1,121105;2,62E-01;;0,09489858
+Loyalty;Krankenversicherung;0,867047;1,36083;0,637147;5,24E-01;;0,02921028
+Loyalty;Video game franchise market;0,385431;1,02296;0,376782;7,06E-01;;0,00740966
+Loyalty;online pharmacies;0,077383;2,49746;0,030985;9,75E-01;;0,00012939
+Loyalty;Online-Apotheken;0,077383;2,49746;0,030985;9,75E-01;;0,00012939
+Loyalty;E-bike & pedelec market;-1,074229;1,95683;-0,548964;5,83E-01;;0,01433932
+Popularity;Waschmaschinen;9,128953;1,22914;7,427098;1,11E-13;***;0,77433136
+Popularity;Kühlschrankmarkt;8,356777;1,29071;6,474575;9,51E-11;***;0,71506577
+Popularity;Antivirus & security software;6,834186;2,11474;3,231695;1,23E-03;**;0,38990679
+Popularity;digital payment;6,751192;0,77068;8,760082;1,95E-18;***;0,81081074
+Popularity;Car & motorcycle online shop;6,414003;0,71115;9,01923;1,89E-19;***;0,82457177
+Popularity;Fernseher;6,379018;0,78723;8,103152;5,36E-16;***;0,87372367
+Popularity;Elektroautos;6,374816;0,56117;11,359939;6,62E-30;***;0,84805058
+Popularity;Smart Home;6,315728;1,00623;6,276599;3,46E-10;***;0,6933885
+Popularity;Staubsauger;5,754007;0,99918;5,758731;8,47E-09;***;0,60811147
+Popularity;Gaming hardware & peripheral market;5,556285;0,991;5,606762;2,06E-08;***;0,62863826
+Popularity;Food processors (Küchenmaschinen);5,466567;1,35763;4,026561;5,66E-05;***;0,49889541
+Popularity;Smartphone market;5,31337;0,71663;7,414404;1,22E-13;***;0,62661185
+Popularity;Mobilitätsdienstleistungen;5,267938;1,10724;4,757703;1,96E-06;***;0,55951292
+Popularity;Air Fryer Market (Heißluftfritteusen);5,26013;0,79865;6,586259;4,51E-11;***;0,67311685
+Popularity;E-bike & pedelec market;5,165335;0,92968;5,556025;2,76E-08;***;0,59156189
+Popularity;Wearable market;5,156298;0,59807;8,621619;6,60E-18;***;0,77710647
+Popularity;Jewelry market;5,150933;0,87113;5,912942;3,36E-09;***;0,63641141
+Popularity;coffee machine & coffee maker;5,126887;1,01209;5,065621;4,07E-07;***;0,56893703
+Popularity;Möbel-Onlineshops;5,123682;0,47671;10,747941;6,06E-27;***;0,85172739
+Popularity;Kopfhörermarkt;5,103834;0,9666;5,280181;1,29E-07;***;0,57683111
+Popularity;OTC medication;4,964446;1,15158;4,310988;1,63E-05;***;0,42215121
+Popularity;AI tool market;4,940544;0,66421;7,438179;1,02E-13;***;0,75401169
+Popularity;Jewelry retailer (Schmuckhändler);4,877113;0,97985;4,977397;6,44E-07;***;0,60198966
+Popularity;Travel portal (Reiseportal);4,793133;0,53708;8,92451;4,48E-19;***;0,7714652
+Popularity;Kryptowährungen;4,6753;0,69032;6,772658;1,26E-11;***;0,70375605
+Popularity;Online Betting (Online-Wetten);4,674516;0,36362;12,855547;8,01E-38;***;0,89594642
+Popularity;Gas stations & e-chargers;4,631466;1,56835;2,953079;3,15E-03;**;0,29991737
+Popularity;Drohnenmarkt;4,553815;1,09686;4,151671;3,30E-05;***;0,55324367
+Popularity;VR & AR Headsets;4,507414;1,04528;4,312151;1,62E-05;***;0,61306148
+Popularity;Luxusmode;4,498397;0,66018;6,813918;9,50E-12;***;0,70316814
+Popularity;price comparison portal market;4,455958;0,5814;7,66424;1,80E-14;***;0,75638628
+Popularity;Krankenversicherung;4,192295;0,85165;4,922557;8,54E-07;***;0,50192056
+Popularity;Premium fashion;4,026417;1,02201;3,939722;8,16E-05;***;0,46593655
+Popularity;Car insurance;3,985807;0,63489;6,277911;3,43E-10;***;0,67238396
+Popularity;Smart Speaker Markt;3,98321;0,705;5,649936;1,61E-08;***;0,66369169
+Popularity;Möbelhäuser (Furniture stores);3,981352;0,3919;10,159068;3,02E-24;***;0,88151247
+Popularity;Hair care;3,892288;0,66001;5,897287;3,70E-09;***;0,67694985
+Popularity;Video game franchise market;3,286717;1,03273;3,182555;1,46E-03;**;0,33718241
+Popularity;E-Mail-Anbieter;3,173351;1,70498;1,86123;6,27E-02;.;0,25473284
+Popularity;online pharmacies;2,966375;1,40607;2,10969;3,49E-02;*;0,27525844
+Popularity;Online-Apotheken;2,966375;1,40607;2,10969;3,49E-02;*;0,27525844
+Popularity;Dating Services;2,547203;1,12912;2,255918;2,41E-02;*;0,24769771
+Popularity;Uhrenmarkt;1,892488;0,67243;2,814421;4,89E-03;**;0,29099727
+Usage;Antivirus & security software;7,610496;2,26454;3,360728;7,77E-04;***;0,46261784
+Usage;E-bike & pedelec market;7,204128;1,26127;5,711804;1,12E-08;***;0,60027344
+Usage;Waschmaschinen;7,043219;1,04092;6,766334;1,32E-11;***;0,71409967
+Usage;digital payment;6,912916;0,76453;9,04204;1,54E-19;***;0,79124382
+Usage;Kühlschrankmarkt;6,394898;1,00719;6,349233;2,16E-10;***;0,67465769
+Usage;Fernseher;6,238231;0,41429;15,057781;3,07E-51;***;0,93813751
+Usage;Möbel-Onlineshops;6,028488;0,55566;10,849159;2,01E-27;***;0,79026717
+Usage;Car & motorcycle online shop;5,751429;0,6919;8,312544;9,37E-17;***;0,75997701
+Usage;Kopfhörermarkt;5,729918;0,75532;7,5861;3,30E-14;***;0,65769643
+Usage;Travel portal (Reiseportal);5,672381;0,67054;8,459432;2,69E-17;***;0,74937219
+Usage;Wearable market;5,651744;0,57007;9,914191;3,61E-23;***;0,78310971
+Usage;Drohnenmarkt;5,48183;0,69864;7,846381;4,28E-15;***;0,81652718
+Usage;Gas stations & e-chargers;5,278597;1,67563;3,150223;1,63E-03;**;0,29560998
+Usage;coffee machine & coffee maker;5,246464;1,06419;4,930003;8,22E-07;***;0,5353104
+Usage;Jewelry market;5,164662;1,35703;3,805852;1,41E-04;***;0,42586191
+Usage;Gaming hardware & peripheral market;5,03313;0,91615;5,493782;3,93E-08;***;0,62799138
+Usage;Staubsauger;5,018904;0,7147;7,022441;2,18E-12;***;0,59436898
+Usage;Smartphone market;5,012644;0,71853;6,976286;3,03E-12;***;0,69535044
+Usage;AI tool market;5,00734;0,83893;5,968736;2,39E-09;***;0,66009691
+Usage;Smart Home;4,85525;1,10428;4,396772;1,10E-05;***;0,54921103
+Usage;Krankenversicherung;4,823902;1,01978;4,73034;2,24E-06;***;0,45254321
+Usage;OTC medication;4,822059;1,2463;3,869111;1,09E-04;***;0,38955851
+Usage;price comparison portal market;4,624006;0,53263;8,681537;3,90E-18;***;0,76169169
+Usage;Smart Speaker Markt;4,567388;0,60493;7,550248;4,34E-14;***;0,72040597
+Usage;Jewelry retailer (Schmuckhändler);4,558028;1,15339;3,951849;7,76E-05;***;0,52837965
+Usage;Video game franchise market;4,537241;0,8972;5,057139;4,26E-07;***;0,57042488
+Usage;Luxusmode;4,533263;0,79659;5,690837;1,26E-08;***;0,66005796
+Usage;Hair care;4,527581;0,78798;5,745824;9,15E-09;***;0,64041333
+Usage;Möbelhäuser (Furniture stores);4,477909;0,53085;8,435415;3,30E-17;***;0,82770766
+Usage;Car insurance;4,422511;0,91627;4,826633;1,39E-06;***;0,44633812
+Usage;Premium fashion;4,41375;1,1529;3,828382;1,29E-04;***;0,45640831
+Usage;Online Betting (Online-Wetten);4,15248;0,404;10,278379;8,82E-25;***;0,82899949
+Usage;Mobilitätsdienstleistungen;4,132879;0,9163;4,510394;6,47E-06;***;0,56604819
+Usage;Air Fryer Market (Heißluftfritteusen);4,098786;0,63751;6,42932;1,28E-10;***;0,56180554
+Usage;Elektroautos;4,082567;0,86737;4,706861;2,52E-06;***;0,40780105
+Usage;VR & AR Headsets;3,550268;0,66865;5,309623;1,10E-07;***;0,74710753
+Usage;Kryptowährungen;3,294706;0,61208;5,382764;7,34E-08;***;0,58326102
+Usage;online pharmacies;3,286953;0,99415;3,306294;9,45E-04;***;0,47194797
+Usage;Online-Apotheken;3,286953;0,99415;3,306294;9,45E-04;***;0,47194797
+Usage;Food processors (Küchenmaschinen);3,084484;0,77433;3,98342;6,79E-05;***;0,53047111
+Usage;Uhrenmarkt;2,831713;0,90399;3,132474;1,73E-03;**;0,31809941
+Usage;E-Mail-Anbieter;2,262667;1,99356;1,134987;2,56E-01;;0,12932933
+Usage;Dating Services;1,552931;1,14532;1,355896;1,75E-01;;0,12590468

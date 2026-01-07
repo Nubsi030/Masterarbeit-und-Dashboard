@@ -1,0 +1,23 @@
+Label_Name;Industry;Buzz;Popularity;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;Cluster;Lineaer Term (?1?);Quadr. Term (?2?);Signifikanz (?2?);Kipp-Punkt (Buzz);Ergebnis 
+;;;Low Involvement;5,0445;-1,2528;n.s. (p = 0,220);–;H0 bebehalten
+;;;High Involvement;6,0270;-3,4676;** (p = 0,003);0,8691;H0ablehnen
+;;;Gesamtmarkt;5,8015;-2,9022;*** (p < 0,001);1;H0ablehnen
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;Cluster;Lineares Beta (?1?);Quadr. Beta (?2?);Signifikanz (?2?);Kipp-Punkt (Buzz)*;Ergebnis / Interpretation
+;;;Low Involvement;5,0445;-1,2528;n.s. (p = 0,220);–;Mere-Exposure: Rein linearer Anstieg. Kein Sättigungseffekt.
+;;;High Involvement;6,027;-3,4676;** (p = 0,003);0,8691;Wear-Out: Signifikante Sättigung (umgekehrtes U). Kipp-Punkt liegt jedoch außerhalb des aktuellen Datenbereichs (Max Buzz = 0,66).
+;;;Gesamtmarkt;5,8015;-2,9022;*** (p < 0,001);1;Diminishing Returns: Abnehmender Grenznutzen im Gesamtverlauf.

@@ -1,0 +1,6 @@
+"Hypothese";"Beta_Low";"Beta_High";"Z_Score";"P_Value";"Sig";"Entscheidung"
+"H6a (Awareness)";"5,4957";"3,6725";" 3,4308";"3,009e-04";"***";"H1 ANGENOMMEN"
+"H6b (Popularity)";"4,5027";"4,4620";" 0,1825";"4,276e-01";"n.s.";"H0 BEIBEHALTEN"
+"H6c (Usage)";"4,7227";"4,5517";" 0,6968";"2,430e-01";"n.s.";"H0 BEIBEHALTEN"
+"H6d (Loyalty)";"1,9827";"2,8492";"-2,8998";"9,981e-01";"n.s.";"H0 BEIBEHALTEN"
+"H6e (Performance)";"3,7421";"3,3656";" 1,6360";"5,092e-02";".";"H0 BEIBEHALTEN"
