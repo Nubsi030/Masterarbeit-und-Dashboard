@@ -84,19 +84,8 @@ Kurze Beschreibungen der Skripte (kompakt)
   Zweck: Erstellung atlasartiger Visualisierungen zur Identifikation von Ausreißern und Performance‑Landscapes (Export als PDF/Plots).  
   Ausgabe: BRAND_PERFORMANCE_ATLAS.pdf, annotierte Plots.
 
-Allgemeine Hinweise zu Skripten
--------------------------------
-- Einheitlicher Header: Ergänze oben in jedem Skript Zweck, Eingabe-/Ausgabedateien, benötigte Pakete, R-Version, Author.  
-- Config-Block: Pfade/Paramater am Anfang zentralisieren.  
-- Ergebnisse in /results oder /output ablegen; set.seed() vor Zufallsoperationen; Logs mit message()/cat().  
-- Empfohlene Pakete (Kurz): tidyverse, betareg, psych, ggplot2, mgcv/segmented (für Nichtlinearitäten), readxl/openxlsx.
 
-Reproduktionskurzguide
-----------------------
-1. Repo klonen: git clone https://github.com/Nubsi030/Masterarbeit-und-Dashboard.git  
-2. R/Packages installieren (z. B. install.packages(c("tidyverse","betareg","psych","ggplot2","readxl")))  
-3. Reihenfolge lokal ausführen: Clean 13.R → Deskriptive Skripte → Beta-Skripte (high/low) → H5/H6 → WearOut → Atlas  
-4. Dashboard: index.html lokal öffnen oder via GitHub Pages hosten.
+
 
 
 
