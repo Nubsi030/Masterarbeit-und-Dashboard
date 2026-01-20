@@ -9,16 +9,13 @@ Inhaltsverzeichnis
 - Status & Ziel
 - Ordnerstruktur & Wichtige Dateien
 - Kurze Skriptbeschreibungen
-- Reproduktionshinweise
-- Benötigte Software & Pakete
-- Ergebnisse, Lizenz & Kontakt
 
 Status & Ziel
 -------------
 - Status: Analysen abgeschlossen; Dashboard (index.html) und Ergebnisdateien vorhanden.  
 - Ziel: Untersuchung der Effekte von Brand Buzz auf mehrere KPIs (u. a. mittels Beta-Regression, Moderationstests, Reliabilitätsprüfungen und Wear‑Out-Analysen).
 
-Ordnerstruktur & Wichtige Dateien (Auswahl)
+Ordnerstruktur & Wichtige Dateien 
 ------------------------------------------
 - R-Skripte (Analyse & Cleaning)
   - beta_high.2.R
@@ -40,7 +37,7 @@ Ordnerstruktur & Wichtige Dateien (Auswahl)
 - Visualisierungen
   - BRAND_PERFORMANCE_ATLAS.pdf
 
-Kurze Beschreibungen der Skripte (kompakt)
+Kurze Beschreibungen der Skripte 
 ------------------------------------------
 
 - Clean 13.R  
