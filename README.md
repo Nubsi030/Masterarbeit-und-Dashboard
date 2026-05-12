@@ -2,7 +2,7 @@
 
 Kurzbeschreibung
 ----------------
-Dieses Repository dokumentiert eine empirische Masterarbeit zur Untersuchung, wie Brand Buzz zentrale Marketingkennzahlen (KPIs) beeinflusst. Analysen wurden hauptsächlich in R durchgeführt; das Repo enthält Skripte, Datensätze, Ergebnis-CSV-Dateien und ein interaktives Dashboard (index.html).
+Dieses Repository dokumentiert eine empirische Untersuchung, wie Brand Buzz zentrale Marketingkennzahlen (KPIs) beeinflusst. Analysen wurden hauptsächlich in R durchgeführt; das Repo enthält Skripte, Datensätze, Ergebnis-CSV-Dateien und ein interaktives Dashboard (index.html).
 
 Inhaltsverzeichnis
 ------------------
