@@ -1,4 +1,4 @@
-# Masterarbeit: Auswirkungen von Brand Buzz auf zentrale Marketing-KPIs
+# Auswirkungen von Brand Buzz auf zentrale Marketing-KPIs
 
 Kurzbeschreibung
 ----------------
